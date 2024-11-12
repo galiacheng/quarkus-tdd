@@ -1,7 +1,6 @@
 package com.redhat.tdd;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.enterprise.context.ApplicationScoped;
 
@@ -11,11 +10,5 @@ public class TDDService {
 
 	public List<Item> getAllItems() {
 		return this.items;
-	}
-
-	public Optional<Item> getItem(Long id) {
-		return this.items.stream()
-			.filter(item -> id == item.getId())
-			.findFirst();
 	}
 }

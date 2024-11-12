@@ -21,23 +21,4 @@ public class TDDResourceTest {
             "[0].message", is("Hello")
           );
     }
-
-    @Test
-    public void getOneFound() {
-        given()
-          .when().get("/tdd/1")
-          .then()
-          .statusCode(200)
-          .body(
-            "id", is(1),
-            "message", is("Hello")
-          );
-    }
-
-    @Test
-    public void getOneNotFound() {
-        given()
-          .when().get("/tdd/2")
-          .then().statusCode(404);
-    }
 }
